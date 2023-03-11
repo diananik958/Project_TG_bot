@@ -40,7 +40,7 @@
 
 1. Python
 2. aiogram
-3. postgres (?)
+3. MS SQL: таблица Users - поля UserID (bigint), TelegramID (bigint), ChatID (bigint), corp_email (text), created_date (datetime)
 
 # 4. Требование к дизайну
 
