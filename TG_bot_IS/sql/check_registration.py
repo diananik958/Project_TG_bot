@@ -10,5 +10,5 @@ def check_user(user_id):
     sql = '''SELECT TelegramID, ChatID, corp_email FROM Users WHERE UserID=?'''.format()
     curs.execute(sql, user_id)
     result = curs.fetchone()    # fetchall
-    return result
+    return str(result)
 
