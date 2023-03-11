@@ -1,5 +1,6 @@
 import pyodbc
 
+
 def create_table(server_name):
     connection_db = pyodbc.connect(r'Driver={SQL Server};Server='+server_name+';Database=TGbot;Trusted_Connection=yes;')
     curs = connection_db.cursor()
