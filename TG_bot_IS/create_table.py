@@ -9,7 +9,7 @@ def create_table(server_name):
                         FROM sysobjects
                         WHERE name='Users')
                         CREATE TABLE Users (
-                        UserID bigint NOT NULL, TelegramID bigint NOT NULL, ChatID bigint NOT NULL, corp_email text, created_date datetime
+                        UserID bigint NOT NULL PRIMARY KEY, TelegramID bigint NOT NULL, ChatID bigint NOT NULL, corp_email text, created_date datetime
                         )
                         ''')
     connection_db.commit()
