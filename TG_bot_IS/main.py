@@ -25,7 +25,6 @@ DOMAIN = os.getenv("DOMAIN")
 
 # START---------------------------------------------------------------------------------------------
 
-
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     user_exists = check_user(message.from_user.id)
