@@ -4,10 +4,10 @@ from aiogram.types import ReplyKeyboardRemove, InputFile
 
 import emoji
 
-from TG_bot_IS.keyboards.inline.choice_but_start_test import towers_4, towers_2
+from TG_bot_IS.main.keyboards.inline.choice_but_start_test import towers_4, towers_2
 
 from aiogram import types
-from TG_bot_IS.handlers.states.on_start_test import CallbackOnStart
+from TG_bot_IS.main.states.on_start_test import CallbackOnStart
 
 from TG_bot_IS.loader import dp
 

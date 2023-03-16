@@ -1,6 +1,7 @@
-from aiogram import executor
+from aiogram import Bot, Dispatcher, executor
 
-from TG_bot_IS.utils.set_bot_commands import set_default_commands
+import main.handlers
+from main.utils.set_bot_commands import set_default_commands
 
 
 from TG_bot_IS.loader import dp
