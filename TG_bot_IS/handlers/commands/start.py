@@ -3,15 +3,14 @@ from aiogram.dispatcher.filters.builtin import CommandStart
 import os
 
 
-from TG_bot_IS.AppExceptions import AppExceptions
 from TG_bot_IS.sql.add_user import add_user
 from TG_bot_IS.sql.check_registration import check_user
 from TG_bot_IS.loader import dp
 
 
-
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
+    print("start")
     user_exists = check_user(message.from_user.id)
     print(user_exists)
     if user_exists == 'None':
@@ -21,7 +20,7 @@ async def bot_start(message: types.Message):
                 f"Добрый день, {message.from_user.first_name}!\nЯ бот, который должен помочь тебе повысить знания в фишинге."
                 "\nНо для начала тебе нужно зарегистрироваться.\nДля этого введите команду /reg"
                 " в формате /reg ваш_адрес@nstu.ru")
-        except AppExceptions.UserAlreadyExist as error:
+        except AssertionError as error:
             print(error)
             await message.answer(
                 f"Добрый день, {message.from_user.first_name}!Я бот, который должен помочь тебе повысить знания в фишинге."
