@@ -2,8 +2,6 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Command
 from aiogram.types import ReplyKeyboardRemove, InputFile
 
-import emoji
-
 from TG_bot_IS.main.keyboards.inline.choice_but_start_test import towers_4, towers_2
 
 from aiogram import types
@@ -32,11 +30,11 @@ async def result1(call: types.CallbackQuery):
     answer = call.data
     if answer == "1":
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №1:\n"
-                                       "верный " + emoji.emojize(':check_mark:'), reply_markup=ReplyKeyboardRemove())
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
         RESULT.append(1)
     else:
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №1:\n"
-                                        "неверный " + emoji.emojize(':cross_mark:'), reply_markup=ReplyKeyboardRemove())
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
         RESULT.append(0)
     await CallbackOnStart.next()
 
@@ -56,11 +54,11 @@ async def result2(call: types.CallbackQuery):
     answer = call.data
     if answer == "2":
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №2:\n"
-                                       "верный " + emoji.emojize(':check_mark:'), reply_markup=ReplyKeyboardRemove())
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
         RESULT.append(1)
     else:
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №2:\n"
-                                        "неверный " + emoji.emojize(':cross_mark:'), reply_markup=ReplyKeyboardRemove())
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
         RESULT.append(0)
     await CallbackOnStart.next()
 
@@ -81,11 +79,11 @@ async def result3(call: types.CallbackQuery):
     answer = call.data
     if answer == "4":
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №3:\n"
-                                       "верный " + emoji.emojize(':check_mark:'), reply_markup=ReplyKeyboardRemove())
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
         RESULT.append(1)
     else:
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №3:\n"
-                                        "неверный " + emoji.emojize(':cross_mark:'), reply_markup=ReplyKeyboardRemove())
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
         RESULT.append(0)
     await CallbackOnStart.next()
 
@@ -105,11 +103,11 @@ async def result4(call: types.CallbackQuery):
     answer = call.data
     if answer == "1":
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №4:\n"
-                                       "верный " + emoji.emojize(':check_mark:'), reply_markup=ReplyKeyboardRemove())
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
         RESULT.append(1)
     else:
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №4:\n"
-                                        "неверный " + emoji.emojize(':cross_mark:'), reply_markup=ReplyKeyboardRemove())
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
         RESULT.append(0)
     await CallbackOnStart.next()
 
@@ -132,12 +130,12 @@ async def end(call: types.CallbackQuery, state: FSMContext):
     answer = call.data
     if answer == "1":
         await call.message.answer(text="Ваш ответ на вопрос №5:\n"
-                                       "верный " + emoji.emojize(':check_mark:') + "\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
+                                       "верный :)\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
                                         parse_mode=types.ParseMode.HTML)
         RESULT.append(1)
     else:
         await call.message.answer(text="Ваш ответ на вопрос №5:\n"
-                                       "неверный " + emoji.emojize(':cross_mark:') + "\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
+                                       "неверный :(\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
                                         parse_mode=types.ParseMode.HTML)
         RESULT.append(0)
     print(RESULT)
