@@ -9,7 +9,6 @@ from TG_bot_IS.sql.sqlite3.check_registration import check_user
 from TG_bot_IS.loader import dp
 
 
-
 @dp.message_handler(CommandStart())
 async def bot_start(message: types.Message):
     user_exists = check_user(message.from_user.id)

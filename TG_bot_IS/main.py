@@ -4,6 +4,8 @@ from main.utils.set_bot_commands import set_default_commands
 
 from sql.sqlite3.create_table import create_table
 
+import main.handlers
+
 from TG_bot_IS.loader import dp
 
 
