@@ -4,8 +4,8 @@ import os
 
 
 from TG_bot_IS.AppExceptions import AppExceptions
-from TG_bot_IS.sql.add_user import add_user
-from TG_bot_IS.sql.check_registration import check_user
+from TG_bot_IS.sql.sqlite3.add_user import add_user
+from TG_bot_IS.sql.sqlite3.check_registration import check_user
 from TG_bot_IS.loader import dp
 
 

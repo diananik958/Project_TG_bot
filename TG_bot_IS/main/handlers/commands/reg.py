@@ -9,8 +9,8 @@ from aiogram.dispatcher.filters import Command
 
 
 from TG_bot_IS.AppExceptions import AppExceptions
-from TG_bot_IS.sql.update_user import update_user
-from TG_bot_IS.sql.check_registration import check_user
+from TG_bot_IS.sql.sqlite3.update_user import update_user
+from TG_bot_IS.sql.sqlite3.check_registration import check_user
 
 from TG_bot_IS.loader import dp
 

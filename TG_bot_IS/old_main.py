@@ -13,10 +13,10 @@ from main.keyboards.inline.choice_but_start_test import towers
 
 
 from AppExceptions import AppExceptions
-from sql.add_user import add_user
-from sql.create_table import create_table
-from sql.update_user import update_user
-from sql.check_registration import check_user
+from sql.sqlite3.add_user import add_user
+from sql.sqlite3.create_table import create_table
+from sql.sqlite3.update_user import update_user
+from sql.sqlite3.check_registration import check_user
 from main.states.on_start_test import CallbackOnStart
 
 
