@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="037ec568-8cb9-4734-8a91-c2652b854ea3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TG_bot_IS/AppExceptions/AppExceptions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TG_bot_IS/main/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TG_bot_IS/old_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/commands/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/commands/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/commands/help.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/commands/help.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/commands/on_start_testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/commands/on_start_testing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/commands/reg.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/commands/reg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/commands/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/commands/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/commands/theory.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/handlers/commands/theory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/states/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/states/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/handlers/states/on_start_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/states/on_start_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/keyboards/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/keyboards/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/keyboards/inline/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/AppExceptions/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/keyboards/inline/choice_but_start_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/keyboards/inline/choice_but_start_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/utils/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TG_bot_IS/utils/set_bot_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/main/utils/set_bot_commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Вопросы.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TG_bot_IS/Вопросы.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +108,7 @@
       <workItem from="1678980515456" duration="596000" />
       <workItem from="1678981120786" duration="132000" />
       <workItem from="1678981255495" duration="55000" />
-      <workItem from="1678981312045" duration="5031000" />
+      <workItem from="1678981312045" duration="4337000" />
     </task>
     <servers />
   </component>
@@ -97,4 +118,10 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Project_TG_bot$main.coverage" NAME="main Coverage Results" MODIFIED="1678983789692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TG_bot_IS" />
+  </component>
+>>>>>>> parent of 09d7016 (Reverted commit)
 </project>
