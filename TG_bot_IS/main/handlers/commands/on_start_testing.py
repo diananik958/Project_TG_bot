@@ -14,7 +14,6 @@ from TG_bot_IS.loader import dp
 
 RESULT = []
 
-
 @dp.message_handler(Command('onstarttest'))
 async def tower(message: types.Message):
     keyboard = towers_4()
@@ -24,7 +23,7 @@ async def tower(message: types.Message):
                          '2. рыбалка онлайн\n'
                          '3. завлечение новых пользователей\n'
                          '4. реферальная программа по набору аудитории\n',
-                         reply_markup=keyboard, parse_mode=types.ParseMode.HTML)
+                         reply_markup=keyboard,parse_mode=types.ParseMode.HTML)
     await CallbackOnStart.Q1.set()
 
 
