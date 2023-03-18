@@ -126,7 +126,7 @@ async def tower(message: types.Message):
 
 
 @dp.callback_query_handler(state=CallbackOnStart.Q5)
-async def result2(call: types.CallbackQuery):
+async def result5(call: types.CallbackQuery):
     answer = call.data
     if answer == "1":
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №5:\n"
@@ -149,7 +149,7 @@ async def on_start_test(message: types.Message):
 
 
 @dp.callback_query_handler(state=CallbackOnStart.Q6)
-async def result4(call: types.CallbackQuery):
+async def result6(call: types.CallbackQuery):
     answer = call.data
     if answer == "2":
         await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №6:\n"
@@ -176,15 +176,39 @@ async def tower(message: types.Message):
 
 
 @dp.callback_query_handler(state=CallbackOnStart.Q7)
-async def end(call: types.CallbackQuery, state: FSMContext):
+async def result7(call: types.CallbackQuery):
     answer = call.data
     if answer == "4":
-        await call.message.answer(text="Ваш ответ на вопрос №7:\n"
+        await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №7:\n"
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
+        RESULT.append(1)
+    else:
+        await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №7:\n"
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
+        RESULT.append(0)
+    await CallbackOnStart.next()
+
+
+@dp.message_handler(state=CallbackOnStart.Q8)
+async def on_start_test(message: types.Message):
+    keyboard = towers_2()
+    await message.answer_photo(InputFile('images/corona_mail.jpg'), '<b>Вопрос №8</b>\nВы получили актуальное письмо от знакомой интернет-аптеки с полезными рекомендациями по профилактике вирусов. Что вы сделаете?\n'
+                         '<u>Выберите номер ответа:</u>\n'
+                         '1. Кликну по ссылке! Интересно, да еще и маски дома закончились\n'
+                         '2. Проигнорирую письмо и отправлю его в папку «Спам»\n',
+                         reply_markup=keyboard, parse_mode=types.ParseMode.HTML)
+
+
+@dp.callback_query_handler(state=CallbackOnStart.Q8)
+async def end(call: types.CallbackQuery, state: FSMContext):
+    answer = call.data
+    if answer == "2":
+        await call.message.answer(text="Ваш ответ на вопрос №8:\n"
                                        "верный :)\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
                                         parse_mode=types.ParseMode.HTML)
         RESULT.append(1)
     else:
-        await call.message.answer(text="Ваш ответ на вопрос №7:\n"
+        await call.message.answer(text="Ваш ответ на вопрос №8:\n"
                                        "неверный :(\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
                                         parse_mode=types.ParseMode.HTML)
         RESULT.append(0)
