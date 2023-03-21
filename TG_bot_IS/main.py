@@ -1,22 +1,18 @@
-from aiogram import Bot, Dispatcher, executor
+from aiogram import executor
 
-import main.handlers
 from main.utils.set_bot_commands import set_default_commands
 
+from sql.sqlite3.create_table import create_table
+
+import main.handlers
 
 from TG_bot_IS.loader import dp
 
 
 async def on_startup(dispatcher):
     # Устанавливаем дефолтные команды
-    try:
-        print("trying await set_default_commands(dispatcher)")
-        await set_default_commands(dispatcher)
-        print("await set_default_commands(dispatcher)")
-    except AssertionError as error:
-        print(error)
+    await set_default_commands(dispatcher)
 
 if __name__ == '__main__':
-    print("executor.start_polling(dp, on_startup=on_startup)")
+    create_table()
     executor.start_polling(dp, on_startup=on_startup)
-
