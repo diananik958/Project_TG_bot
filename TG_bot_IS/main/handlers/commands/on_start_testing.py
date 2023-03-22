@@ -200,15 +200,64 @@ async def on_start_test(message: types.Message):
 
 
 @dp.callback_query_handler(state=CallbackOnStart.Q8)
+async def result8(call: types.CallbackQuery):
+    answer = call.data
+    if answer == "2":
+        await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №8:\n"
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
+        RESULT.append(1)
+    else:
+        await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №8:\n"
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
+        RESULT.append(0)
+    await CallbackOnStart.next()
+
+
+@dp.message_handler(state=CallbackOnStart.Q9)
+async def tower(message: types.Message):
+    keyboard = towers_4()
+    await message.answer(text="<b>Вопрос №9</b>\nКакой способ может помочь для защиты от фишинга? \n<u>Выберите номер ответа:</u>\n"
+                              "1. Как можно меньше использовать собственный интернет и отдавать предпочтение общественному Wi-Fi\n"
+                              "2. Обращать внимание на сертификат безопасности\n"
+                              "3. Не обновлять ПО роутера\n"
+                              "4. Все варианты верны",
+                         reply_markup=keyboard, parse_mode=types.ParseMode.HTML)
+
+
+@dp.callback_query_handler(state=CallbackOnStart.Q9)
+async def result9(call: types.CallbackQuery):
+    answer = call.data
+    if answer == "2":
+        await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №9:\n"
+                                       "верный :)", reply_markup=ReplyKeyboardRemove())
+        RESULT.append(1)
+    else:
+        await call.message.answer(text="Следующий вопрос: /onstarttest\nВаш ответ на вопрос №9:\n"
+                                        "неверный :(", reply_markup=ReplyKeyboardRemove())
+        RESULT.append(0)
+    await CallbackOnStart.next()
+
+
+@dp.message_handler(state=CallbackOnStart.Q10)
+async def on_start_test(message: types.Message):
+    keyboard = towers_2()
+    await message.answer_photo(InputFile('images/exchange.jpg'), '<b>Вопрос №10</b>\nВы решили избавиться от ненужных вещей и пытаетесь продать их на известном сайте с объявлениями. Вам приходит такое сообщение. Что будете делать?\n'
+                         '<u>Выберите номер ответа:</u>\n'
+                         '1. Кликну по ссылке — вдруг там выгодное предложение?\n'
+                         '2. Не буду переходить по ссылке и удалю сообщение\n',
+                         reply_markup=keyboard, parse_mode=types.ParseMode.HTML)
+
+
+@dp.callback_query_handler(state=CallbackOnStart.Q10)
 async def end(call: types.CallbackQuery, state: FSMContext):
     answer = call.data
     if answer == "2":
-        await call.message.answer(text="Ваш ответ на вопрос №8:\n"
+        await call.message.answer(text="Ваш ответ на вопрос №10:\n"
                                        "верный :)\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
                                         parse_mode=types.ParseMode.HTML)
         RESULT.append(1)
     else:
-        await call.message.answer(text="Ваш ответ на вопрос №8:\n"
+        await call.message.answer(text="Ваш ответ на вопрос №10:\n"
                                        "неверный :(\n<b>Тест закончен</b>", reply_markup=ReplyKeyboardRemove(),
                                         parse_mode=types.ParseMode.HTML)
         RESULT.append(0)
