@@ -8,9 +8,8 @@ def create_table():
     connection_db = sqlite3.connect(os.getenv("PATH_DB"))
     curs = connection_db.cursor()
     curs.execute("""CREATE TABLE IF NOT EXISTS Users(
-       UserID INT NOT NULL PRIMARY KEY,
+       UserID INTEGER PRIMARY KEY AUTOINCREMENT,
        TelegramID INT NOT NULL,
-       ChatID INT NOT NULL,
        corp_email TEXT,
        created_date TEXT);
     """)
