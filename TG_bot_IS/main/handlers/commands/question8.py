@@ -1,3 +1,4 @@
+"""
 @dp.message_handler(state=CallbackOnStart.Q8)
 async def on_start_test(message: types.Message):
     keyboard = towers_2()
@@ -20,3 +21,4 @@ async def result4(call: types.CallbackQuery):
                                         "неверный :(", reply_markup=ReplyKeyboardRemove())
         RESULT.append(0)
     await CallbackOnStart.next()
+"""
