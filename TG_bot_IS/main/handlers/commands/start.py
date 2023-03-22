@@ -14,7 +14,7 @@ async def bot_start(message: types.Message):
     print(user_exists)
     if user_exists == 'None':
         try:
-            add_user(message.from_user.id, message.from_user.id, message.chat.id)
+            add_user(message.from_user.id)
             await message.answer(
                 f"Добрый день, {message.from_user.first_name}!\nЯ бот, который должен помочь тебе повысить знания в фишинге."
                 "\nНо для начала тебе нужно зарегистрироваться.\nДля этого введите команду /reg"
@@ -22,7 +22,7 @@ async def bot_start(message: types.Message):
         except Exception as error:
             print(error)
             await message.answer(
-                f"Добрый день, {message.from_user.first_name}!Я бот, который должен помочь тебе повысить знания в фишинге."
+                f"Добрый день, {message.from_user.first_name}!\nЯ бот, который должен помочь тебе повысить знания в фишинге."
                 "\nЧто-то пошло не так.")
         except Exception as e:
             print(e)

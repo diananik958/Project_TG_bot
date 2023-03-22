@@ -23,13 +23,14 @@ DOMAIN = os.getenv("DOMAIN")
 async def register(message: types.Message):
     data = message.text[5:].split(' ')
     check_email = data[0].split('@')
+    print(check_email)
     if len(check_email) != 2:
         await message.answer("Введен некорректный адрес эл. почты, попробуйте еще раз")
     else:
         if check_email[1] == 'nstu.ru':
-            corpemail = check_user(message.from_user.id)[1:-1].split(', ')
+            corpemail = check_user(message.from_user.id)[1:-2]
             print(corpemail)
-            if corpemail[2] == 'None':
+            if corpemail == 'None':
                 try:
                     update_user(message.from_user.id, data[0])
                     print(message.from_user.id, data[0])

@@ -7,7 +7,7 @@ def check_user(user_id):
     load_dotenv()
     connection_db = sqlite3.connect(os.getenv("PATH_DB"))
     curs = connection_db.cursor()
-    sql = '''SELECT TelegramID, ChatID, corp_email FROM Users WHERE UserID=?'''
+    sql = '''SELECT corp_email FROM Users WHERE TelegramID=?'''
     curs.execute(sql, (user_id, ))
     result = curs.fetchone()
     return str(result)

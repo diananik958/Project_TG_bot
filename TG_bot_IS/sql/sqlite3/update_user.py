@@ -9,6 +9,6 @@ def update_user(user_id, corp_email):
     connection_db = sqlite3.connect(os.getenv("PATH_DB"))
     curs = connection_db.cursor()
     created_date = datetime.now()
-    sql = "UPDATE Users SET corp_email=?, created_date=? WHERE UserID=?"
+    sql = "UPDATE Users SET corp_email=?, created_date=? WHERE TelegramID=?"
     curs.execute(sql, (corp_email, created_date, user_id))
     connection_db.commit()
